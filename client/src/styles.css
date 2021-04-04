@@ -1,0 +1,174 @@
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.loginpagegrid {
+  background-image: url("../src/images/loginbackground.jpg");
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.registerpagegrid {
+  background-image: url("../src/images/registerbackground.jpg");
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.homelayout {
+  background-image: url("../src/images/TwoRoadsTaken.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 25px;
+  height: 250px;
+}
+.card-div {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-top: 0.4rem;
+}
+.card-div > a {
+  color: inherit;
+}
+.card-image-div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0.5rem 0.1rem;
+  padding: 0.1rem;
+}
+.card-image-div img {
+  width: 100%;
+  height: 100%;
+}
+.card-description-div {
+  width: 60%;
+  display: inline-block;
+  margin-left: 2px;
+  padding-left: 0.5rem;
+  vertical-align: middle;
+}
+.card-by-when {
+  display: block;
+  text-align: right;
+  font-size: medium;
+}
+.usercard {
+  width: 22%;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+  margin-top: 3rem;
+  margin-right: 0.5rem;
+  position: relative;
+}
+.usercard .username {
+  vertical-align: middle;
+  color: black;
+  font-size: 1.5rem;
+  font-family: cursive;
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+.usercard-image-div {
+  text-align: center;
+  height: 150px;
+  width: 150px;
+  margin: auto;
+}
+.usercard-image-div img {
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+}
+.useremail {
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 1.1rem;
+}
+.num_follow {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: #00a0aa;
+  color: whitesmoke;
+}
+.followings-list {
+  display: none;
+}
+.followers-list {
+  display: none;
+}
+.posts-list {
+  display: none;
+}
+.show {
+  display: block;
+}
+.Footer-other {
+  clear: both;
+  bottom: 0;
+  position: relative;
+  top: 273px;
+  width: 100%;
+}
+.post-btn {
+  padding: 0.5rem;
+  background: #ddd;
+  color: rgb(36, 32, 32);
+  border: none;
+  width: 10%;
+  text-align: center;
+  margin: 0.1rem;
+  border-radius: 8px;
+}
+button:focus {
+  outline: none;
+}
+.comment {
+  border-top: 1px solid #ddd;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2rem;
+  padding: 5px;
+  color: rgba(36, 39, 41);
+}
+.comment p {
+  font-size: 14px;
+  line-height: 1.2rem;
+}
+.comment button {
+  position: absolute;
+  right: 10px;
+  bottom: -14px;
+  padding: 4px 8px;
+  border: none;
+  background-color: rgb(225, 236, 244);
+
+  border-radius: 4px;
+  color: rgb(0, 119, 204);
+}
+.comment a {
+  background-color: rgb(225, 236, 244);
+  color: rgb(0, 119, 204);
+  padding: 1px 5px;
+  line-height: 1.2rem;
+  border-radius: 3px;
+  font-size: 13px;
+}
+.comment span {
+  color: rgb(145, 153, 161);
+  font-weight: 400;
+}
+.comment:nth-of-type() {
+  border-bottom: 1px solid;
+}
+.subcomments {
+  text-align: right;
+  display: none;
+}
