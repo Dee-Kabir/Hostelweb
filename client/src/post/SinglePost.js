@@ -141,7 +141,11 @@ const SinglePost = (props) => {
 
             <hr />
             <p className="font-italic mark">
-              Posted by <Link to={`${posterId}`}>{posterName} </Link>
+              Posted by <Link to={
+                isAuthenticated().user._id != person._id
+                  ? `/user/profile/${person._id}`
+                  : `/user/${person._id}`
+              }>{posterName} </Link>
               on {new Date(post.created).toDateString()}
             </p>
           </div>

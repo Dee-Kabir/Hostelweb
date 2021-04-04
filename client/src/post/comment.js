@@ -99,7 +99,11 @@ const Comment = ({ postId, comments, updateComments }) => {
                     <p className="lead">
                       {com.body} -{" "}
                       <Link
-                        to={`/user/${com.postedBy ? com.postedBy._id : ""}`}
+                        to={
+                          isAuthenticated().user._id != person._id
+                            ? `/user/profile/${person._id}`
+                            : `/user/${person._id}`
+                        }
                       >
                         {com.postedBy ? com.postedBy.name : "Anonymous"}
                       </Link>{" "}

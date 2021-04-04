@@ -25,7 +25,11 @@ const PostCard = ({ post }) => (
     </Link>
     <div className="card-by-when">
       postedBy{" "}
-      <Link to={`/user/${post.postedBy._id}`}>{post.postedBy.name}</Link> on{" "}
+      <Link to={
+        isAuthenticated().user._id != person._id
+          ? `/user/profile/${person._id}`
+          : `/user/${person._id}`
+      }>{post.postedBy.name}</Link> on{" "}
       {moment(post.created).fromNow()}
     </div>
   </div>
