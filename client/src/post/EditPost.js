@@ -66,7 +66,6 @@ const EditPost = (props) => {
 
       update(postId, token, formData).then((data) => {
         if (data.error) {
-          console.log(data);
           setState({ ...state, error: data.error });
           window.alert("There is an error while updating!!");
         } else {

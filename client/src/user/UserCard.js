@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import DefaultAvatar from "../images/DefaultAvatar.png";
+import {API} from '../Config'
 const UserCard = ({ user }) => {
   return (
     <div className="usercard">
@@ -8,7 +9,7 @@ const UserCard = ({ user }) => {
       <div className="usercard-image-div">
         <img
           src={
-            `http://localhost:8000/api/user/photo/${user._id}` || DefaultAvatar
+            `${API}/user/photo/${user._id}` || DefaultAvatar
           }
           onError={(i) => (i.target.src = `${DefaultAvatar}`)}
         />

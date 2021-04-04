@@ -6,6 +6,8 @@ import DefaultAvatar from "../images/mount.jfif";
 import Comment from "./comment";
 import Footer from "../core/Footer";
 import OtherMenu from "../core/OtherMenu";
+import {API_POST} from '../Config'
+
 const SinglePost = (props) => {
   const [state, setState] = useState({
     post: "",
@@ -115,7 +117,7 @@ const SinglePost = (props) => {
             style={{ height: "300px", width: "100%" }}
             src={
               post.photo
-                ? `http://localhost:8000/p/post/photo/${post._id}`
+                ? `${API_POST}/post/photo/${post._id}`
                 : DefaultAvatar
             }
           />

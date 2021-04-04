@@ -8,6 +8,7 @@ import ProfileTabs from "./ProfileTabs";
 import OtherMenu from "../core/OtherMenu";
 import Footer from "../core/Footer";
 import Loading from "../core/Loading";
+import {API} from '../Config'
 const OtherProfile = (props) => {
   const [state, setState] = useState({
     user: { following: [], followers: [] },
@@ -88,7 +89,7 @@ const OtherProfile = (props) => {
               }}
               src={
                 user.photo
-                  ? `http://localhost:8000/api/user/photo/${user._id}`
+                  ? `${API}/user/photo/${user._id}`
                   : DefaultAvatar
               }
               onError={(i) => (i.target.src = `${DefaultAvatar}`)}

@@ -1,6 +1,8 @@
 import DefaultAvatar from "../images/DefaultAvatar.png";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../auth";
+import {API} from '../Config'
+
 const FriendCard = ({ person }) => {
   return (
     <div className="row" style={{ width: "100%" }}>
@@ -23,7 +25,7 @@ const FriendCard = ({ person }) => {
                 objectFit: "contain",
                 borderRadius: "70%",
               }}
-              src={`http://localhost:8000/api/user/photo/${person._id}`}
+              src={`${API}/user/photo/${person._id}`}
               onError={(i) => (i.target.src = `${DefaultAvatar}`)}
             />
 

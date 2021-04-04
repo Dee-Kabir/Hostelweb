@@ -6,6 +6,7 @@ import DefaultAvatar from "../images/DefaultAvatar.png";
 import OtherMenu from "../core/OtherMenu";
 import Footer from "../core/Footer";
 import Loading from "../core/Loading";
+import {API} from '../Config'
 
 const EditProfile = (props) => {
   const [state, setState] = useState({
@@ -137,7 +138,7 @@ const EditProfile = (props) => {
         {showerror(error)}
         <img
           src={
-            photo ? `http://localhost:8000/api/user/photo/${id}` : DefaultAvatar
+            photo ? `${API}/user/photo/${id}` : DefaultAvatar
           }
           style={{
             maxWidth: "200px",

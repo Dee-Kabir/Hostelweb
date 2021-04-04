@@ -3,7 +3,7 @@ import { Card, Icon } from "semantic-ui-react";
 import DefaultAvatar from "../images/TwoRoadsTaken.jpg";
 import moment from "moment";
 import { Link } from "react-router-dom";
-
+import {API_POST} from '../Config'
 const PostCard = ({ post }) => (
   <div className="card-div">
     <Link to={`/post/${post._id}`}>
@@ -14,7 +14,7 @@ const PostCard = ({ post }) => (
         <img
           src={
             post.photo
-              ? `http://localhost:8000/p/post/photo/${post._id}`
+              ? `${API_POST}/post/photo/${post._id}`
               : DefaultAvatar
           }
         />
@@ -32,12 +32,4 @@ const PostCard = ({ post }) => (
 );
 
 export default PostCard;
-{
-  /*<Card
-    image={post.photo?`http://localhost:8000/p/post/photo/${post._id}`:DefaultAvatar}
-    header={post.title}
-    meta={`postedBy ${post.postedBy.name}`}
-    description={post.body.substr(0,100)}
-    extra={moment(post.created).fromNow()}
-  />*/
-}
+
