@@ -1,3 +1,3 @@
-export const API = process.env.REACT_APP_API_URL;
+export const API = "https://hostelwebpost.herokuapp.com/api"
 
-export const API_POST = process.env.REACT_APP_POST_URL;
+export const API_POST = "https://hostelwebpost.herokuapp.com/p"
