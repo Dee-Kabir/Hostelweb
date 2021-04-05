@@ -92,9 +92,9 @@ const Profile = (props) => {
               className="avatar_image"
             />
           </div>
-          <div className="col-md-6">
-            <p>Hello: {user.name} </p>
-            <p>Email: {user.email}</p>
+          <div className="col-md-6 mt-4">
+            <p className="userdetails">Hello: {user.name} </p>
+            <p className="userdetails">Email: {user.email}</p>
 
             {isAuthenticated().user && user._id == isAuthenticated().user._id && (
               <div className="d-inline-block mt-5">

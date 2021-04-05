@@ -172,3 +172,8 @@ button:focus {
   text-align: right;
   display: none;
 }
+@media (max-width:'768px'){
+  .userdetails {
+    text-align: center!important;
+  }
+}

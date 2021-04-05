@@ -106,8 +106,8 @@ const SinglePost = (props) => {
     setState({ ...state, comments: comments });
   };
   const renderPost = (post) => {
-    const posterId = post.postedBy ? `/user/${post.postedBy._id}` : "";
     const posterName = post.postedBy ? post.postedBy.name : "unknown";
+    const posterId = post.postedBy ? post.postedBy._id: isAuthenticated().user._id
     return (
       <div className="card mt-5  mr-2">
         <div className="card-header name ">{post.title}</div>
@@ -142,9 +142,9 @@ const SinglePost = (props) => {
             <hr />
             <p className="font-italic mark">
               Posted by <Link to={
-                isAuthenticated().user._id != person._id
-                  ? `/user/profile/${person._id}`
-                  : `/user/${person._id}`
+                isAuthenticated().user._id != posterId
+                  ? `/user/profile/${posterId}`
+                  : `/user/${posterId}`
               }>{posterName} </Link>
               on {new Date(post.created).toDateString()}
             </p>

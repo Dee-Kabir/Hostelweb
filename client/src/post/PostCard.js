@@ -4,6 +4,7 @@ import DefaultAvatar from "../images/TwoRoadsTaken.jpg";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import {API_POST} from '../Config'
+import { isAuthenticated } from "../auth/index";
 const PostCard = ({ post }) => (
   <div className="card-div">
     <Link to={`/post/${post._id}`}>
@@ -26,9 +27,9 @@ const PostCard = ({ post }) => (
     <div className="card-by-when">
       postedBy{" "}
       <Link to={
-        isAuthenticated().user._id != person._id
-          ? `/user/profile/${person._id}`
-          : `/user/${person._id}`
+        isAuthenticated().user._id != post.postedBy._id
+          ? `/user/profile/${post.postedBy._id}`
+          : `/user/${post.postedBy._id}`
       }>{post.postedBy.name}</Link> on{" "}
       {moment(post.created).fromNow()}
     </div>

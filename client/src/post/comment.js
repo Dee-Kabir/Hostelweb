@@ -100,9 +100,9 @@ const Comment = ({ postId, comments, updateComments }) => {
                       {com.body} -{" "}
                       <Link
                         to={
-                          isAuthenticated().user._id != person._id
-                            ? `/user/profile/${person._id}`
-                            : `/user/${person._id}`
+                          isAuthenticated().user._id != com.postedBy._id
+                            ? `/user/profile/${com.postedBy._id}`
+                            : `/user/${com.postedBy._id}`
                         }
                       >
                         {com.postedBy ? com.postedBy.name : "Anonymous"}

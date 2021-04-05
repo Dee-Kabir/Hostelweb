@@ -96,8 +96,8 @@ const OtherProfile = (props) => {
             />
           </div>
           <div className="col-md-6">
-            <p>Hello: {user.name} </p>
-            <p>Email: {user.email}</p>
+            <p className="userdetails">Name: {user.name} </p>
+            <p className="userdetails">Email: {user.email}</p>
             {isAuthenticated().user && (
               <FollowProfileButtton
                 following={following}

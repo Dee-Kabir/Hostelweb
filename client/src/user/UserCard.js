@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import DefaultAvatar from "../images/DefaultAvatar.png";
 import {API} from '../Config'
+import { isAuthenticated } from "../auth/index";
 const UserCard = ({ user }) => {
   return (
     <div className="usercard" style={{minWidth:'140px'}}>
@@ -25,9 +26,9 @@ const UserCard = ({ user }) => {
           marginBottom: "1rem",
         }}
         to={
-          isAuthenticated().user._id != person._id
-            ? `/user/profile/${person._id}`
-            : `/user/${person._id}`
+          isAuthenticated().user._id != user._id
+            ? `/user/profile/${user._id}`
+            : `/user/${user._id}`
         }
       >
         <button className="viewprofile-button btn btn-primary btn-raised">
